@@ -6,18 +6,32 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * Data Base for phone numbers of various people.
+ */
 public class PhoneNumbers {
     private Map<String, List<PhoneNumber>> dataBase;
 
+    /**
+     * Create and populate Data Base.
+     */
     public PhoneNumbers() {
         dataBase = new HashMap<>();
         fillDataBase();
     }
 
+    /**
+     * Return list of phone numbers for given name.
+     * @param name name of a person
+     * @return list of phone numbers for given name
+     */
     public List<PhoneNumber> getPhoneNumbers(String name) {
         return dataBase.get(name);
     }
 
+    /**
+     * Populate Data Base with predefined values.
+     */
     private void fillDataBase() {
         List<PhoneNumber> numbers = new ArrayList<>();
         numbers.add(new PhoneNumber("+8 800 2000 500"));
