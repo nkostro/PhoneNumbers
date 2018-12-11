@@ -46,8 +46,9 @@ public class PhoneNumbers {
         if (numbers == null) {
             System.out.println("No phone numbers for \"" + name + "\" in Data Base");
         } else {
+            int i = 0;
             for (PhoneNumber num : numbers) {
-                System.out.println(num);
+                System.out.println(++i + ". " + num);
             }
         }
     }
